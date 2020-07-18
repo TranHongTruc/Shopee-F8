@@ -29,7 +29,6 @@ p {
 
 .grid__full-width {
     width: 100%;
-
 }
 
 .grid__row {
@@ -86,6 +85,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 1.6rem;
 }
 
 .btn.btn--normal:hover{
