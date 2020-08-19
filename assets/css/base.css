@@ -4,19 +4,18 @@
     --black-color: #000;
     --text-color: #333;
     --border-color: #dbdbdb;
-
     --header-height: 120px;
     --navbar-height: 34px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 * {
-    box-sizing : inherit;
+    box-sizing: inherit;
 }
 
 html {
     font-size: 62.5%;
-    line-height: 1.6rem ;
+    line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
@@ -24,6 +23,9 @@ html {
 p {
     font-size: 1.6rem;
 }
+
+
+/* Responesive */
 
 .grid {
     width: 1200px;
@@ -38,16 +40,38 @@ p {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
 }
 
+
+/* test */
+
+.grid__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid__column-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
+}
+
+
+/* Ket thuc responesive */
+
+
 /* Animation */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
-    }   
+    }
 }
 
 @keyframes growth {
@@ -59,7 +83,9 @@ p {
     }
 }
 
+
 /* Modal */
+
 .modal {
     position: fixed;
     top: 0;
@@ -75,7 +101,6 @@ p {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    
 }
 
 .modal__body {
@@ -87,10 +112,12 @@ p {
     animation: growth linear 0.1s;
 }
 
+
 /* Button style */
-.btn { 
+
+.btn {
     color: var(--text-color);
-    min-width: 124px;
+    min-width: 90px;
     height: 36px;
     text-decoration: none;
     border: none;
@@ -99,13 +126,14 @@ p {
     padding: 0 12px;
     outline: none;
     cursor: pointer;
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     line-height: 1.6rem;
+    background-color: white;
 }
 
-.btn.btn--normal:hover{
+.btn.btn--normal:hover {
     background-color: rgba(0, 0, 0, 0.01);
 }
 
@@ -114,7 +142,7 @@ p {
     padding: 0 8px;
 }
 
-.btn.btn-primary { 
+.btn.btn-primary {
     color: var(--while-color);
     background-color: var(--primary-color);
 }
@@ -124,4 +152,29 @@ p {
     cursor: default;
     /* filter: brightness(80%); */
     background-color: #999;
+}
+
+
+/* Selection */
+
+.select-input {
+    padding: 0 12px;
+    height: 34px;
+    border-radius: 2px;
+    min-width: 200px;
+    background-color: var(--while-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
 }
